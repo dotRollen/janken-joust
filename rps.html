@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 2
+  </title>
+</head>
+
+<body>
+
+  <div id="game-alert">
+    <p>To play the game press r, s or p</p>
+  </div>
+  <div id="score-board">
+    <p>Player Score: <span id="player-score">0</span></p>
+    <p>Computer Score: <span id="computer-score">0</span></p>
+    <p>Tie: <span id="tie-score">0</span></p>
+  </div>  
+
+  <script type="text/javascript">
+
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var computerChoices = ["r", "p", "s"];
+
+    var computerScore = 0;
+    var userScore = 0;
+    var tieScore = 0;
+
+    var computerScoreText = document.getElementById("computer-score");
+    var userScoreText = document.getElementById("player-score");
+    var tieScoreText = document.getElementById("tie-score");
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+
+      // Determines which key was pressed.
+      var userGuess = event.key;
+
+      // Randomly chooses a choice from the options array. This is the Computer's guess.
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+      
+      // Alerts the key the user pressed (userGuess).
+      alert("User guess: " + userGuess);
+
+      // Alerts the Computer's guess.
+      alert("Computer guess: " + computerGuess);
+      if (userGuess === "r" || userGuess === "p" || userGuess === "s") {
+        if (userGuess == "r" && computerGuess == "p") {
+          computerScore++;
+          computerScoreText.textContent = computerScore;
+        }
+
+        else if (userGuess == "r" && computerGuess == "s") {
+          userScore++;
+          userScoreText.textContent = userScore;
+        }
+
+        else if (userGuess == "s" && computerGuess == "p") {
+          userScore++;
+          userScoreText.textContent = userScore;
+        }
+
+        else if (userGuess == "s" && computerGuess == "r") {
+          computerScore++;
+          computerScoreText.textContent = computerScore;
+        }
+
+        else if (userGuess == "p" && computerGuess == "s") {
+          computerScore++;
+          computerScoreText.textContent = computerScore;
+        }
+
+        else if (userGuess == "p" && computerGuess == "r") {
+          userScore++;
+          userScoreText.textContent = userScore;
+        }
+
+        else {
+          tieScore++;
+          tieScoreText.textContent = tieScore;
+        }
+      }
+    };
+  </script>
+
+</body>
+
+</html>
