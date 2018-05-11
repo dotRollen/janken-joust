@@ -9,7 +9,7 @@ After the first if condition is met, the second if conditions will check what th
 
 TODO:
 
-Add a function that ends game after either player reaches a certain score for a game over and reset.
-Add a feature to allow user to enter name
-Add reset button
-Add CSS styling
+* Add a function that ends game after either player reaches a certain score for a game over and reset.
+* Add a feature to allow user to enter name
+* Add reset button
+* Add CSS styling
