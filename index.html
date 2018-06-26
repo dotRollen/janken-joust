@@ -1,88 +1,63 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Rock Paper Scissors - Multiplayer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" 
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" 
-    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
-    <link rel="stylesheet" 
-      href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" 
-      integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" 
-      crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
+
 <body>
+   <!-- Begin navbar -->
   <nav class="navbar navbar-dark bg-dark">
-    <button class="btn" onclick="githubLogin()">
-        <i class="fab fa-github"></i> Login
-    </button>
+    <a class="navbar-brand" href="#">RPS Multi</a>
+
+    <span id="btn-login">
+    <button type="button" class="btn form-inline" data-toggle="modal" data-target="#loginModal" id="sign-in">
+      <i class="fas fa-sign-in-alt "></i> Sign In
+    </button></span>
   </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <br />
-        <div class="jumbotron">
-            <center><h1 class="display-4">ROCK, PAPER, SCIZZAHS!</h1></center>
+  <!-- End navbar -->
+  <!-- Begin main content -->
+  <div class="container" id="main-content">
+  </div>
+  <!-- End main content -->
+  <!-- Begin User Login modal-->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">
+            <i class="fas fa-id-card"></i> Sign In</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <i class="far fa-times-circle"></i>
+            </span>
+          </button>
         </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-4">
-        <div class="card">
-            <div class="card-body">
-              This is some text within a card body.
-            </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card">
-            <div class="card-body">
-              This is some text within a card body.
-            </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card">
-          <div class="card-body">
-            This is some text within a card body.
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <br />
-        <div class="card">
-          <div class="card-body">
-            This is some text within a card body.
-          </div>
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1"><i class="fas fa-angle-double-right"></i></span>
-          </div>
-          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        <div class="modal-body">
         </div>
       </div>
     </div>
   </div>
+   <!-- End User Login modal-->
 </body>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" 
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" 
-  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
   crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" 
-  integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" 
+  integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
   crossorigin="anonymous"></script>
 <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 <script src="assets/javascript/main.js"></script>
+<script src="assets/javascript/session.js"></script>
 </html>
