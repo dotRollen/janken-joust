@@ -129,7 +129,7 @@ var Game = (function() {
             } else {
                 window.setTimeout(function() {
                     gameRef.update(data);
-                }, 1000);
+                }, 2000);
             }
         }
         setTimeout(countDown, 1000);
