@@ -1,3 +1,7 @@
+/*
+* Boilerplate CSS For Material Design Lite
+*/
+
 body::before {
     background-size: cover;
     background-attachment: fixed;
@@ -476,7 +480,9 @@ body .demo-blog {
   box-sizing: border-box;
 }
 
-/* Custom CSS */
+/* 
+* Custom CSS for the rock paper scissors game specifically
+*/
 
 #logout-btn {
   display: none;

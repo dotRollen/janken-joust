@@ -1,3 +1,7 @@
+/*
+* Required CSS to allowed dialog boxes to work in platforms other then google chrome
+*/
+
 dialog {
     position: absolute;
     left: 0; right: 0;

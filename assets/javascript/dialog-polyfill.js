@@ -1,3 +1,7 @@
+/*
+* required javascript for dialog boxes to work in firefox or other platforms
+*/
+
 (function() {
 
     // nb. This is for IE10 and lower _only_.
