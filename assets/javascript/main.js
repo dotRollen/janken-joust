@@ -1,6 +1,6 @@
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyAAP4q4Ot6jtVGW8obXh64XHO4AAsdsZFQ",
+    apiKey: "API-KEY",
     authDomain: "janken-joust.firebaseapp.com",
     databaseURL: "https://janken-joust.firebaseio.com",
     projectId: "janken-joust",
