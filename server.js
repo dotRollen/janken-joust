@@ -6,6 +6,7 @@ const passport = require('passport'),
       mongoose = require('mongoose'),
       app = require('express')(),
       server = require('http').createServer(app),
+      io = require('socket.io')(server);
       allRoutes = require('./routes'),
       { CLIENT_ORIGIN } = require('./config/client.config');
 
@@ -27,6 +28,8 @@ app.use(
     saveUninitialized: true,
   }),
 );
+
+app.set('io', io);
 
 app.use(express.static('client/build'));
 app.use('/', allRoutes(passport));

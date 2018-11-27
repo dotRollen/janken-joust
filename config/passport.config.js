@@ -39,6 +39,5 @@ module.exports = (passport) => {
       }
     )
   );
-
   // TODO google strategy
 }
